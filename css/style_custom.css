@@ -4,6 +4,10 @@
   height: 100vh;
 }
 
+.teaser-container {
+  max-width: 100%;
+}
+
 .teaser-icon {
   font-size: 70px !important;
   color: #daba71 !important;
@@ -16,6 +20,12 @@
   margin: 0 auto 15px;
   font-size: 140px;
   color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .teaser-timer {
+    font-size: 70px;
+  }
 }
 
 .teaser-timer__countdown_day,
