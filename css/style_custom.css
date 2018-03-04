@@ -1,0 +1,53 @@
+.teaser {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.teaser-icon {
+  font-size: 70px !important;
+  color: #daba71 !important;
+}
+
+.teaser-timer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 140px;
+  color: #fff;
+}
+
+.teaser-timer__countdown_day,
+.teaser-timer__countdown_hour,
+.teaser-timer__countdown_min,
+.teaser-timer__countdown_sec {
+  position: relative;
+  letter-spacing: 4px;
+}
+
+.teaser-timer__countdown_day::after,
+.teaser-timer__countdown_hour::after,
+.teaser-timer__countdown_min::after {
+  position: relative;
+  top: -10px;
+  content: ':';
+}
+
+.teaser-text {
+  position: relative;
+  margin-top: 60px;
+  opacity: .5;
+}
+
+.teaser-text::before {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  margin-left: -75px;
+  background: url('../images/circle.svg') no-repeat;
+  background-size: contain;
+  content: '';
+}
