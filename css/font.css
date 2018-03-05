@@ -2,8 +2,8 @@
     font-family: 'Phenomena';
     font-style: normal;
     font-weight: bold;
-    src: url('../fonts/Phenomena-Bold.woff2') format('woff2'),
-        url('../fonts/Phenomena-Bold.woff') format('woff'),
-        url('../fonts/Phenomena-Bold.ttf') format('truetype'),
-        url('../fonts/Phenomena-Bold.svg#Phenomena-Bold') format('svg');
+    src: url('../fonts/phenomena/Phenomena-Bold.woff2') format('woff2'),
+        url('../fonts/phenomena/Phenomena-Bold.woff') format('woff'),
+        url('../fonts/phenomena/Phenomena-Bold.ttf') format('truetype'),
+        url('../fonts/phenomena/Phenomena-Bold.svg#Phenomena-Bold') format('svg');
 }
