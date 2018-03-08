@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var magnifPopup = function() {
 		$('.image-popup').magnificPopup({
 			type: 'image',
-			removalDelay: 300,
+			removalDelay: 0,
 			mainClass: 'mfp-with-zoom',
 			gallery:{
 				enabled:true
@@ -11,7 +11,7 @@ $(document).ready(function() {
 			zoom: {
 				enabled: true, // By default it's false, so don't forget to enable it
 
-				duration: 300, // duration of the effect, in milliseconds
+				duration: 400, // duration of the effect, in milliseconds
 				easing: 'ease-in-out', // CSS transition easing function
 
 				// The "opener" function should return the element from which popup will be zoomed in
@@ -22,6 +22,20 @@ $(document).ready(function() {
 				// you don't need to add "opener" option if this code matches your needs, it's defailt one.
 				return openerElement.is('img') ? openerElement : openerElement.find('img');
 				}
+			}
+		});
+	};
+
+	var magnifPopupText = function() {
+		$('.popup-modal').magnificPopup({
+			type: 'inline',
+			removalDelay: 300,
+			mainClass: 'mfp-with-zoom',
+			showCloseBtn: true,
+			zoom: {
+				enabled: true, // By default it's false, so don't forget to enable it
+				duration: 300, // duration of the effect, in milliseconds
+				easing: 'ease-in-out', // CSS transition easing function
 			}
 		});
 	};
@@ -38,11 +52,8 @@ $(document).ready(function() {
     });
 	};
 
-	
-
-
-	// Call the functions 
+	// Call the functions
 	magnifPopup();
+	magnifPopupText();
 	magnifVideo();
-
 });

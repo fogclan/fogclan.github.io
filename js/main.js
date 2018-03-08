@@ -532,7 +532,7 @@
 		contactAnimate();
 
 		if ($('.js-timer').length) {
-	      teaser.initCountdown(2018, 3, 9);
+      teaser.initCountdown(2018, 3, 9);
 	  }
 
 	});
