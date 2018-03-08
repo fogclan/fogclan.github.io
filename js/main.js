@@ -68,7 +68,7 @@
 
 				if ( $('[data-section="' + section + '"]').length ) {
 			    	$('html, body').animate({
-			        	scrollTop: $('[data-section="' + section + '"]').offset().top
+			        	scrollTop: $('[data-section="' + section + '"]').offset().top - 100
 			    	}, 500);
 			   }
 
@@ -132,9 +132,9 @@
 		   	var header = $('#fh5co-header'),
 				scrlTop = $(this).scrollTop();
 
-			if ( scrlTop > 500 && scrlTop <= 2000 ) {
+			if ( scrlTop > 200 && scrlTop <= 2000 ) {
 				header.addClass('navbar-fixed-top fh5co-animated slideInDown');
-			} else if ( scrlTop <= 500) {
+			} else if ( scrlTop <= 200) {
 				if ( header.hasClass('navbar-fixed-top') ) {
 					header.addClass('navbar-fixed-top fh5co-animated slideOutUp');
 					setTimeout(function(){
@@ -161,6 +161,34 @@
 
 					setTimeout(function() {
 						$('#fh5co-home .to-animate').each(function( k ) {
+							var el = $(this);
+
+							setTimeout ( function () {
+								el.addClass('fadeInUp animated');
+							},  k * 200, 'easeInOutExpo' );
+
+						});
+					}, 200);
+
+
+					$(this.element).addClass('animated');
+
+				}
+			} , { offset: '80%' } );
+
+		}
+	};
+
+	var bannerAnimate = function() {
+		if ( $('#banner').length > 0 ) {
+
+			$('#banner').waypoint( function( direction ) {
+
+				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+
+
+					setTimeout(function() {
+						$('#banner .to-animate').each(function( k ) {
 							var el = $(this);
 
 							setTimeout ( function () {
@@ -523,6 +551,7 @@
 
 		// Animations
 		homeAnimate();
+		bannerAnimate();
 		introAnimate();
 		workAnimate();
 		testimonialAnimate();
